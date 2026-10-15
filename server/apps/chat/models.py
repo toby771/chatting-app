@@ -5,7 +5,7 @@ from apps.user.models import User
 class ChatRoom(models.Model):
 	roomId = ShortUUIDField()
 	type = models.CharField(max_length=10, default='DM')
-	# member = models.ManyToManyField(User)
+	member = models.ManyToManyField(User)
 	name = models.CharField(max_length=20, null=True, blank=True)
 
 	def __str__(self):
